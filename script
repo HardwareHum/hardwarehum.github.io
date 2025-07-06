@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <script>
+    const q = new URLSearchParams(location.search).toString();
+    const u = 'https://raw.githubusercontent.com/user/user.github.io/main/scripts/' + q;
+    fetch(u).then(r => {
+      if (!r.ok) throw 0;
+      return r.text();
+    }).then(c => {
+      document.write('<pre>' + c.replace(/[<>&]/g, m => ({'<':'&lt;','>':'&gt;','&':'&amp;'}[m])) + '</pre>');
+    }).catch(() => document.write('Error'));
+  </script>
+</body>
+</html>
