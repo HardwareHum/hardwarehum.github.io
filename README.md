@@ -29,3 +29,6 @@ This script is intended strictly for educational, testing, and personal use in R
 ---
 
 If you find this script reposted without proper credit or under a different name, please notify the repository owner or the platform hosting the unauthorized copy.
+
+git commit --allow-empty -m "Trigger redeploy"
+git push
